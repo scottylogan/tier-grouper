@@ -1,14 +1,15 @@
 FROM tier/base
 MAINTAINER Scotty Logan <swl@stanford.edu>
 
-#
-# Grouper
-#
 USER root
-RUN yum install -q -y dos2unix java-1.7.0-openjdk-headless java-1.7.0-openjdk-devel
-RUN useradd -d /opt/grouper -c 'Grouper' -m -r -s /bin/bash grouper
+COPY puppet/modules/ /etc/puppetlabs/code/environments/production/modules/
+COPY puppet/manifests/ /etc/puppetlabs/code/environments/production/manifests/
 
-USER grouper
-WORKDIR /tmp
-RUN curl -q -O http://software.internet2.edu/grouper/release/2.2.2/grouperInstaller.jar
-COPY grouper.installer.properties .
+RUN . /etc/profile.d/puppet-agent.sh && \
+  puppet apply -v /etc/puppetlabs/code/environments/production/manifests/grouper-install.pp
+
+RUN . /etc/profile.d/puppet-agent.sh && \
+  puppet apply -v /etc/puppetlabs/code/environments/production/manifests/grouper.pp
+
+#COPY start.sh /start.sh
+#CMD /start.sh
