@@ -5,6 +5,7 @@
   "author":                   "tier",
   "summary":                  "Configures TIER Shibboleth SPs",
   "license":                  "MIT",
+  "source":                   "",
   "data_provider":            "hiera",
   "dependencies":             [
     {
