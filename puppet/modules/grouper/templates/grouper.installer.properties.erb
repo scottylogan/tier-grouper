@@ -1,0 +1,17 @@
+download.server.url = http://software.internet2.edu/grouper
+download.source.url = https://github.com/Internet2/grouper/archive/$BRANCH_NAME$.zip
+download.pspSource.url = https://github.com/Internet2/grouper-psp/archive/$BRANCH_NAME$.zip
+grouper.version = <%= @version %>
+grouperInstaller.default.installOrUpgrade = install
+grouperInstaller.default.tarballDirectory = /tmp
+grouperInstaller.default.installDirectory = <%= @base_dir %>
+grouperInstaller.default.existingInstalledDirectory = <%= @base_dir %>
+grouperInstaller.useTestPatches = false
+grouperInstaller.autorun.useDefaultsAsMuchAsAvailable = true
+grouperInstaller.autorun.actionEgInstallUpgradePatch = install
+grouperInstaller.autorun.grouperWhereInstalled = <%= @base_dir %>s
+grouperInstaller.autorun.grouperSystemPassword = secret
+grouperInstaller.autorun.installDirectory = <%= @base_dir %>
+grouperInstaller.autorun.runningProcesses = f
+grouperInstaller.autorun.useBuiltInHsql = t
+grouperInstaller.autorun.deleteAndInitDatabase = t

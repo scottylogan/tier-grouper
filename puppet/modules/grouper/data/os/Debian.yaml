@@ -1,0 +1,5 @@
+# grouper/data/os/Debian.yaml
+---
+base::jdk_name: openjdk-7-jdk
+grouper::tomcat_user: tomcat7
+grouper::tomcat_group: tomcat7

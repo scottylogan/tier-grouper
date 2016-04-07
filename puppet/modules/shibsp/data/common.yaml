@@ -1,0 +1,8 @@
+# shib/data/common.yaml
+---
+shibsp::entity_id: "https://%{hiera('::fqdn')}/"
+shibsp::idp_entity_id: "https://idp.%{hiera('::domain')}/"
+shibsp::idp_metadata_url: "http://md.incommon.org/InCommon/InCommon-metadata.xml"
+shibsp::base_dir: "/etc/shibboleth"
+shibsp::contact: "support@%{hiera('::domain')}"
+

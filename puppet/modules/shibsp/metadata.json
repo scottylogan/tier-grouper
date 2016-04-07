@@ -1,0 +1,15 @@
+{
+  "name":                     "tier-shibsp",
+  "description":              "Simple TIER Shibboleth SP configuration",
+  "version":                  "1.0.0",
+  "author":                   "tier",
+  "summary":                  "Configures TIER Shibboleth SPs",
+  "license":                  "MIT",
+  "data_provider":            "hiera",
+  "dependencies":             [
+    {
+      "name":                 "puppetlabs-apache",
+      "version_requirement":  ">=1.8.0"
+    }
+  ]
+}

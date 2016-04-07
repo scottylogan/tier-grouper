@@ -1,0 +1,9 @@
+# grouper/data/os/RedHat.yaml
+---
+grouper::java_home: /usr/lib/jvm/java
+grouper::tomcat_user: tomcat
+grouper::tomcat_group: tomcat
+grouper::tomcat_context_dir: /etc/tomcat/Catalina/localhost
+grouper::tomcat_webapps_dir: /var/lib/tomcat/webapps
+grouper::install::jdk_name: java-1.7.0-openjdk-devel
+grouper::install::java_home: "%{hiera('grouper::java_home')}"

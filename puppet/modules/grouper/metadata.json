@@ -1,0 +1,13 @@
+{
+  "name": "tier-grouper",
+  "version": "0.1.0",
+  "author": "tier",
+  "summary": "Grouper configuration for TIER images",
+  "license": "MIT",
+  "source": "",
+  "project_page": null,
+  "issues_url": null,
+  "data_provider": "hiera",
+  "dependencies": [ ]
+}
+

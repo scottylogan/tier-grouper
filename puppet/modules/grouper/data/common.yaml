@@ -1,0 +1,19 @@
+# grouper/data/common.yaml
+---
+grouper::version: 2.2.2
+grouper::base_dir: "/opt/grouper"
+grouper::api_dir: "%{hiera('grouper::base_dir')}/grouper.apiBinary-%{hiera('grouper::version')}"
+grouper::ui_dir: "%{hiera('grouper::base_dir')}/grouper.ui-%{hiera('grouper::version')}"
+grouper::ws_dir: "%{hiera('grouper::base_dir')}/grouper.ws-%{hiera('grouper::version')}"
+grouper::client_dir: "%{hiera('grouper::base_dir')}/grouper.clientBinary-%{hiera('grouper::version')}"
+grouper::psp_dir: "%{hiera('grouper::base_dir')}/grouper.psp-%{hiera('grouper::version')}"
+grouper::db_dialect: org.hibernate.dialect.MySQL5Dialect
+grouper::db_class: com.mysql.jdbc.Driver
+grouper::db_type: mysql
+grouper::db_host: tierdb
+grouper::db_port: 3306
+grouper::db_name: grouper
+grouper::db_user: grouper
+grouper::db_pass: 
+grouper::install::version: "%{hiera('grouper::version')}"
+grouper::install::base_dir: "%{hiera('grouper::base_dir')}"
