@@ -3,6 +3,9 @@
 
 forge "https://forge.puppetlabs.com"
 
+mod 'tier-base',
+  :git  => 'https://github.com/scottylogan/puppet-tier-base.git',
+  :ref  => 'v0.1.0'
 
 mod 'tier-grouper',
   :git  => 'https://github.com/scottylogan/puppet-tier-grouper.git',
