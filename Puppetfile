@@ -4,6 +4,11 @@
 forge "https://forge.puppetlabs.com"
 
 
-mod 'grouper', :path => './modules.local/grouper'
-mod 'shibsp',  :path => './modules.local/shibsp'
+mod 'tier-grouper',
+  :git  => 'https://github.com/scottylogan/puppet-tier-grouper.git',
+  :ref  => 'v0.1.0'
+
+mod 'tier-shibsp',
+  :git  => 'https://github.com/scottylogan/puppet-tier-shibsp.git',
+  :ref  => 'v0.1.0'
 
