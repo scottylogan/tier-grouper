@@ -20,5 +20,7 @@ RUN rm -f /etc/puppetlabs/code/environments/production/manifests/install.pp
 RUN . /etc/profile.d/puppet-agent.sh && \
   puppet apply -v /etc/puppetlabs/code/environments/production/manifests/default.pp
 
+VOLUME /etc/tier
+
 #COPY start.sh /start.sh
 #CMD /start.sh
