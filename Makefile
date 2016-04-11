@@ -1,4 +1,4 @@
 all: grouper
   
 grouper:
-	docker build -t tier/grouper .
+	docker build -t tier/grouper --no-cache .

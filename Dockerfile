@@ -6,7 +6,9 @@ COPY Puppetfile /etc/puppetlabs/code
 COPY *.pp /etc/puppetlabs/code/environments/production/manifests/
 
 WORKDIR /etc/puppetlabs/code
-RUN librarian-puppet install --verbose
+RUN rm -f Puppetfile.lock && \
+  . /etc/profile.d/puppet-agent.sh && \
+  librarian-puppet install --verbose --clean
 
 WORKDIR /
 
